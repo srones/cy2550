@@ -1,0 +1,23 @@
+# Last Modified: Sat Aug  7 12:25:28 2021
+#include <tunables/global>
+
+#Last Modified: Fri Aug  6 20:46:08 2021
+
+
+/home/stavrones/cy2550/project4/p2 {
+  #include <abstractions/apache2-common>
+  #include <abstractions/base>
+  #include <abstractions/user-tmp>
+
+  deny /sys/kernel/mm/transparent_hugepage/hpage_pmd_size r,
+
+  /etc/hostid r,
+  /etc/hosts r,
+  /etc/passwd r,
+  /etc/timezone r,
+  /home/stavrones/cy2550/project4/template r,
+  /proc/uptime r,
+  /var/log/syslog r,
+  owner /home/*/.project2/config w,
+
+}
